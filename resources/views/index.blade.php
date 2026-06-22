@@ -14,7 +14,7 @@
         
         <div class="relative px-6 py-16 md:py-24 md:px-10 text-center text-white w-full">
             <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
-                آرایشگر در محل و منزل در تهران و حومه
+                آرایشگر در منزل و محل در تهران و حومه
             </h1>
             
             <p class="text-lg md:text-xl text-white/80 max-w-lg mx-auto mb-8">
