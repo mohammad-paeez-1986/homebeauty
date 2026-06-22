@@ -1,0 +1,70 @@
+user
+    login-register(by sms long time) 🏝
+    request:
+        request limitation? 
+            2 request per day? can set 2 request in same day and same time?
+        where can cancel it?
+            2 hours before request time.
+    sms code:
+        limitation of sending per IP? per Number? per day?
+
+        re-send code when? 
+            after 2 min show resend code
+        change number:
+            show always (but consider sms limitations)
+--------------------------------------------------------------------
+       // $order = Order::find(10);
+        // redirect()->route('request-registered')->with('success', $order->id);
+        $validated = $this->validate();
+        // check if logged in
+        if (!auth()->check()) {
+            $validatedMobile = $validated['mobile'];
+            // if sms code has sent
+            if ($this->isCodeSent) {
+                // $this->checkCode($validated['name'], $validatedMobile);
+                $this->checkCode(fn() => $this->save());
+            }
+            // if sms code not sent, submit first
+            else {
+                $this->sendCode($validatedMobile);
+            }
+            // $this->sendSmsCode(fn() => $this->save());
+        } else {
+            $this->save();
+        }
+===================================================================================================
+sms code in parent? or step2
+if put in parent and after sms sent successfully show the step2,
+we need to pass $sms row to step2
+--
+if put it in step2, we quick after validation step1 going to step 3 and after show_source
+step2 part sms will start to send
+
+if there is problem with sms sending?
+we already showing step2 without sms be sent,
+but in 1 way 
+    
+sms code attemps:
+    when send new one old one will delete and it will attempt on new one?
+===================================================================================================
+checklist for test:
+then upload more content
+after that run sms
+after ok upload in subdomain
+List of test:
+    🦆 remove error after modal close
+    🦆 Login
+    🦆 send
+    🦆 resend
+    🦆 ratelimiter
+    🦆 login long
+    🦆 Order scroll for any error
+    🦆 scroll right place in step 2
+    🦆 show correct time to select
+    🦆 save address in local storage
+    🦆 step 2 and order saving
+    🦆 process of cancel order by user(change کنسل شده)
+    🦆 check ui in mobile
+    
+
+

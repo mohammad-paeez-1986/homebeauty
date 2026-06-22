@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+/* Vazirmatn Font Face Declarations */
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vazirrmatn";
+    src: url("/public/fonts/Vazirmatn-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans:
+        "Vazirrmatn", "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --color-amber-50: #FCF4EE;
+    --color-amber-100: #F7E6D6;
+    --color-amber-200: #EFCEB6;
+    --color-amber-300: #E5B08F;
+    --color-amber-400: #D48F66;
+    --color-amber-500: #B8734A;
+    --color-amber-600: #8B5E3C;
+    --color-amber-700: #67371A;
+    --color-amber-800: #542C14;
+    --color-amber-900: #402011;
+    --color-amber-950: #2C150B;
+}
+
+html,
+body {
+    direction: rtl;
+    text-align: right;
+    background: #f2f6fc;
+    padding-bottom: env(safe-area-inset-bottom, 12px);
+    line-height: 30px;
+    font-family: 'Vazirrmatn';
+}
+
+label {
+    font-size: 14px;
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+.dir-ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+button,
+a,
+.btn,
+[role="button"] {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mm { display: none }
+
+table-container {
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    background: white;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    font-size: 12px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #fcfcfa;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+table tbody tr:hover {
+    background-color: #fcfcfa;
+}
+
+table td {
+    padding: 0.9rem 1.5rem;
+    vertical-align: middle;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #888;
+}
