@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: آپلود فایل‌های تغییر یافته به هاست از طریق FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
